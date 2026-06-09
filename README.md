@@ -1,11 +1,19 @@
-# Threads Agent Factory — 실수요를 발굴해 AI 에이전트를 자동 제조하는 공장
+# Threads Agent Factory — 사람들의 실제 AI 활용을 소스로 에이전트를 자동 제조하는 공장
 
-> 소셜(Threads)에서 사용자의 **실수요**를 발굴 → 당신의 카탈로그에 **아직 없는** 유용한 AI 에이전트만
-> **에이전트 제조 방법론**으로 만들고 → **유용성 80점 게이트**를 통과한 것만 출시하는 **자가성장
-> 에이전트 공장** 스킬(방법론)입니다. 사람은 마지막 출시 승인만, 나머지는 공장이 돕니다.
+> 소셜(Threads)에서 사람들이 **공유하는 실제 AI 활용(스킬·도구·프롬프트·워크플로우)** 을 소스로
+> 에이전트 소재를 발굴 → 당신의 카탈로그에 **아직 없는** 유용한 AI 에이전트만 **에이전트 제조 방법론**으로
+> 만들고 → **유용성 80점 게이트**를 통과한 것만 출시하는 **자가성장 에이전트 공장** 스킬(방법론)입니다.
+> 사람은 마지막 출시 승인만, 나머지는 공장이 돕니다.
 
-**English TL;DR** — A *self-growing agent factory* methodology. It mines **real user demand** from a
-social feed (Threads via Apify), extracts agent ideas, and judges duplicates by **content overlap —
+> ⚠️ **소스 정의 (오해 금지)**: 이 공장의 소스는 사람들이 *"이런 거 필요해요 / 만들어주세요"* 라고
+> **요청·표명한 니즈가 아닙니다.** 사람들이 쓰레드에 **실제로 AI로 무엇을 하고 있는지 — 자기가 쓰는
+> 스킬·도구·프롬프트·워크플로우·활용 패턴 — 을 공유·자랑한 글**이 소스입니다. 즉 표명된 수요(stated
+> need)가 아니라 **드러난 실사용(revealed usage)** 에서 에이전트화할 소재를 뽑습니다.
+
+**English TL;DR** — A *self-growing agent factory* methodology. It mines **how people actually use AI** —
+the skills, tools, prompts, and workflows they *share* on a social feed (Threads via Apify) — **not** what
+they *ask for*. The source is **revealed usage, not stated demand.** It extracts agent ideas from that, and
+judges duplicates by **content overlap —
 not keyword matching**: `<50%` = new, `50–79%` = absorb the differentiator, `≥80%` = duplicate (still
 absorb any good idea into the existing agent). Surviving candidates are built with an **agent
 manufacturing method** (parts discovery + verification + 10-element identity), then scored 1–100 for
@@ -21,9 +29,9 @@ only where unavoidable** — collection, asset generation, and production runtim
 
 ```
 [Threads 원천글]
-   │  ① 수집  (API: Apify · 니즈형 키워드 · 최신 N개월 · 한국어 필터)
+   │  ① 수집  (API: Apify · 실활용·공유형 키워드 · 최신 N개월 · 한국어 필터)
    ▼
-   ② 발굴      → 캡션에서 에이전트 아이디어 추출           (구독 추론 · 직접)
+   ② 발굴      → 캡션 속 실사용·공유 활용에서 아이디어 추출   (구독 추론 · 직접)
    ▼
    ③ 중복성 판정 (내용 기반 겹침률 · 이름/키워드 X)         (구독 추론 · 직접)
        ├─ < 50%  · NEW     → 신규 인정, 제조 큐
@@ -45,8 +53,8 @@ only where unavoidable** — collection, asset generation, and production runtim
 
 | 단계 | 무엇을 | 누가 / 비용 |
 |---|---|---|
-| ① 수집 | 니즈형 키워드로 Threads 글 수집 (최신 N개월·한국어·인기순) | API (Apify) |
-| ② 발굴 | 캡션에서 에이전트/스킬 아이디어 추출 (홍보·밈·정치 제외) | 구독 추론 · 직접 |
+| ① 수집 | 실활용·공유형 키워드로 Threads 글 수집 (최신 N개월·한국어·인기순) | API (Apify) |
+| ② 발굴 | 캡션 속 **실사용·공유 활용**(쓰는 스킬·도구·프롬프트)에서 에이전트 소재 추출 (홍보·밈·정치 제외) | 구독 추론 · 직접 |
 | ③ 중복성 판정 | **내용 기반 겹침률**로 NEW/PARTIAL/DUP 분류 | 구독 추론 · 직접 |
 | ④ 인기도 필터 | 원천글 반응(♥) 임계값 미만 컷 | 구독 추론 · 직접 |
 | ⑤ 제조 | 에이전트 제조 방법론 (BOM·부품 검증·정체성 10요소·포털형) | 구독 추론 + 불가피 API |
@@ -89,14 +97,14 @@ only where unavoidable** — collection, asset generation, and production runtim
 ## 사용법
 
 ```text
-1) 키워드(니즈형) · 기간(months) · 인기도 임계값(♥) · 합격선(80) · 제조 개수 결정
+1) 키워드(실활용·공유형) · 기간(months) · 인기도 임계값(♥) · 합격선(80) · 제조 개수 결정
 2) ① 수집 (API)  → ② 발굴  → ③ 중복성 판정  → ④ 인기도 필터
 3) ⑤ 제조 (에이전트 제조 방법론)  → ⑥ 80점 게이트
 4) 통과분만 → ⑦ 출시 (사람 승인 후 배포)
 ```
 
 - 기본 파라미터: `months=3` · `like_threshold=10` · `pass_score=80` · `max_manufacture=운영자 지정`
-- 키워드는 니즈·페인·실활용형으로. 개발자 도구명(특정 CLI·프로토콜 등)은 잡음이라 제외 권장.
+- 키워드는 **실활용·공유형 우선**("AI로 만들었"·"이렇게 자동화했다"·"이 프롬프트 쓴다" 등 — 활용을 공유·자랑하는 글). 니즈·페인은 보조. 개발자 도구명(특정 CLI·프로토콜 등)은 잡음이라 제외 권장.
 
 ---
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1500" viewBox="0 0 1080 1500" font-family="'Malgun Gothic','Apple SD Gothic Neo',sans-serif" role="img" aria-labelledby="t d">
   <title id="t">쓰레드-에이전트공장 — 관계도 + 흐름도</title>
-  <desc id="d">Threads(소셜 스크레이퍼)에서 실수요를 발굴하고, 운영자가 구독 추론으로 발굴·중복판정·평가를 직접 하며, 에이전트 제조 코어로 에이전트를 만들고, 80점 게이트와 사람 승인을 통과한 것만 당신의 플랫폼에 출시하는 자가성장 에이전트 공장의 구성요소 관계도(아키텍처)와 7단계 시간순 흐름도. 구독 직접 추론과 불가피한 API 호출의 비용 경계를 색으로 구분.</desc>
+  <desc id="d">Threads(소셜 스크레이퍼)에서 사람들이 공유한 실제 AI 활용(드러난 실사용)을 소스로 에이전트 소재를 발굴하고, 운영자가 구독 추론으로 발굴·중복판정·평가를 직접 하며, 에이전트 제조 코어로 에이전트를 만들고, 80점 게이트와 사람 승인을 통과한 것만 당신의 플랫폼에 출시하는 자가성장 에이전트 공장의 구성요소 관계도(아키텍처)와 7단계 시간순 흐름도. 구독 직접 추론과 불가피한 API 호출의 비용 경계를 색으로 구분.</desc>
   <rect x="0" y="0" width="1080" height="1500" fill="#f1f5f9"/>
   <defs>
     <marker id="ah" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="11" refX="11" refY="5.5" orient="auto"><path d="M0,0 L11,5.5 L0,11 Z" fill="#475569"/></marker>
@@ -12,7 +12,7 @@
   <!-- 헤더 -->
   <rect x="0" y="0" width="1080" height="120" fill="#0f172a"/>
   <text x="540" y="54" text-anchor="middle" fill="#ffffff" font-size="36" font-weight="bold">쓰레드-에이전트공장 — 관계도 + 흐름도</text>
-  <text x="540" y="94" text-anchor="middle" fill="#93c5fd" font-size="19">실수요 발굴 · 내용기반 중복판정 · 에이전트 제조 · 80점 게이트 · 승인 후 출시</text>
+  <text x="540" y="94" text-anchor="middle" fill="#93c5fd" font-size="19">실사용 발굴 · 내용기반 중복판정 · 에이전트 제조 · 80점 게이트 · 승인 후 출시</text>
 
   <!-- 범례 (비용 경계) -->
   <rect x="40" y="134" width="14" height="14" rx="3" fill="#dbeafe" stroke="#60a5fa"/>
@@ -35,7 +35,7 @@
   <rect x="50" y="266" width="280" height="100" rx="12" fill="#fffbeb" stroke="#fcd34d"/>
   <rect x="50" y="266" width="10" height="100" rx="5" fill="#f59e0b"/>
   <text x="74" y="298" fill="#92400e" font-size="19" font-weight="bold">Threads · Apify 수집</text>
-  <text x="74" y="324" fill="#475569" font-size="14">니즈형 키워드 · 최신 N개월</text>
+  <text x="74" y="324" fill="#475569" font-size="14">실활용·공유 키워드 · 최신 N개월</text>
   <text x="74" y="346" fill="#475569" font-size="14">한국어 필터 · top 정렬 · 중복제거</text>
 
   <!-- 수집 → 운영자 -->
@@ -47,7 +47,7 @@
   <rect x="400" y="266" width="280" height="160" rx="14" fill="#eff6ff" stroke="#93c5fd"/>
   <rect x="400" y="266" width="10" height="160" rx="5" fill="#3b82f6"/>
   <text x="424" y="297" fill="#1d4ed8" font-size="19" font-weight="bold">운영자 (구독 추론)</text>
-  <text x="424" y="326" fill="#0f172a" font-size="14">• 발굴 — 아이디어 추출</text>
+  <text x="424" y="326" fill="#0f172a" font-size="14">• 발굴 — 실사용서 소재 추출</text>
   <text x="424" y="350" fill="#0f172a" font-size="14">• 중복판정 — 내용 겹침률</text>
   <text x="424" y="374" fill="#0f172a" font-size="14">• 평가 — 80점 유용성</text>
   <text x="424" y="398" fill="#0f172a" font-size="14">• 작성 — system_prompt·intro</text>
@@ -105,13 +105,13 @@
   <!-- 1 수집 -->
   <rect x="120" y="724" width="840" height="50" rx="12" fill="#fffbeb" stroke="#fcd34d"/>
   <rect x="120" y="724" width="12" height="50" rx="6" fill="#f59e0b"/>
-  <text x="540" y="755" text-anchor="middle" fill="#0f172a" font-size="21" font-weight="bold">① 수집 — Threads/Apify · 니즈형 키워드 · 최신 N개월 (API)</text>
+  <text x="540" y="755" text-anchor="middle" fill="#0f172a" font-size="21" font-weight="bold">① 수집 — Threads/Apify · 실활용·공유 키워드 · 최신 N개월 (API)</text>
   <line x1="540" y1="774" x2="540" y2="790" stroke="#94a3b8" stroke-width="4" marker-end="url(#ah)"/>
 
   <!-- 2 발굴 -->
   <rect x="120" y="792" width="840" height="50" rx="12" fill="#eff6ff" stroke="#93c5fd"/>
   <rect x="120" y="792" width="12" height="50" rx="6" fill="#3b82f6"/>
-  <text x="540" y="823" text-anchor="middle" fill="#0f172a" font-size="21" font-weight="bold">② 발굴 — 캡션에서 에이전트 아이디어 추출 (구독 직접)</text>
+  <text x="540" y="823" text-anchor="middle" fill="#0f172a" font-size="21" font-weight="bold">② 발굴 — 캡션 속 실사용에서 에이전트 소재 추출 (구독 직접)</text>
   <line x1="540" y1="842" x2="540" y2="858" stroke="#94a3b8" stroke-width="4" marker-end="url(#ah)"/>
 
   <!-- 3 중복성 판정 (분기 4구간) -->

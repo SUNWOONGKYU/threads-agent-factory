@@ -75,7 +75,7 @@
   <rect x="746" y="472" width="10" height="150" rx="5" fill="#16a34a"/>
   <text x="770" y="503" fill="#15803d" font-size="19" font-weight="bold">80점 유용성 게이트</text>
   <text x="770" y="531" fill="#0f172a" font-size="14">운영자가 1~100 직접 판정</text>
-  <text x="770" y="555" fill="#0f172a" font-size="14">실물 산출 · 완성도 기준</text>
+  <text x="770" y="555" fill="#0f172a" font-size="14">유용성·정합·접근성·신뢰 다축</text>
   <text x="770" y="579" fill="#dc2626" font-size="14">80점 미만 → 컷 (출시 안 함)</text>
   <text x="770" y="603" fill="#15803d" font-size="14">통과분만 출시 큐로</text>
 
@@ -160,7 +160,7 @@
   <text x="160" y="1322" fill="#075985" font-size="21" font-weight="bold">⑦ 출시 — DB(approved) · 카탈로그 카드 · 에이전트 페이지 · 배포 (API)</text>
   <text x="160" y="1350" fill="#0f172a" font-size="16">★ 프로덕션 변경 = </text>
   <text x="338" y="1350" fill="#15803d" font-size="16" font-weight="bold">사람 승인 게이트</text>
-  <text x="500" y="1350" fill="#0f172a" font-size="16">· 라이브 기능 검증 (curl 200 금지)</text>
+  <text x="500" y="1350" fill="#0f172a" font-size="16">· 별도검증 기능·정합·접근성 (curl 200 금지)</text>
 
   <text x="540" y="1410" text-anchor="middle" fill="#64748b" font-size="17">관계도 = 무엇이 무엇을 호출·제조·출시 · 흐름도 = 7단계 시간 순서 · 게이트 2곳(80점·사람 승인) · 비용 경계 색 구분</text>
 </svg>
